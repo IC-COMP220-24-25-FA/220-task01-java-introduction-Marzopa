@@ -32,7 +32,7 @@ public class CircleTest {
     public void doubleSizeTest(){
         Circle myCircle = new Circle(2);
         myCircle.doubleSize();
-        assertEquals(4, myCircle.getRadius(), 0);
+        assertEquals(4, myCircle.getRadius());
 
         myCircle = new Circle(0.1);
         myCircle.doubleSize();
