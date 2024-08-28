@@ -12,4 +12,15 @@ public class RectangleTest {
         testRectangle = new Rectangle(2, 0.5);
         assertEquals(1, testRectangle.calcArea());
     }
+
+    @Test
+    public void doubleSizeTest(){
+        Rectangle testRectangle = new Rectangle(4, 5);
+        testRectangle.doubleSize();
+        assertEquals(80, testRectangle.calcArea());
+
+        testRectangle = new Rectangle(0.5, 2);
+        testRectangle.doubleSize();
+        assertEquals(4, testRectangle.calcArea());
+    }
 }
