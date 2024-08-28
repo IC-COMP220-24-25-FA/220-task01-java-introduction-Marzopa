@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
 
 public class CircleTest {
@@ -27,6 +26,13 @@ public class CircleTest {
 
         myCircle = new Circle(0.001);
         assertEquals(0.00000314159, myCircle.calcArea(), 0.0000000001);
+    }
+
+    @Test
+    public void doubleSizeTest(){
+        Circle myCircle = new Circle(2);
+        myCircle.doubleSize();
+        assertEquals(4, myCircle.getRadius(), 0.0001);
     }
 
     @Test
