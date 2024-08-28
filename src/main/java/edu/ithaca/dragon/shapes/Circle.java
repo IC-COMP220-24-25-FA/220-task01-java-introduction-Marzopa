@@ -25,7 +25,7 @@ public class Circle {
      * @post doubles the size of this circle
      */
     public void doubleSize(){
-        throw new RuntimeException("Not implemented yet");
+        radius = radius * 2;
     }
 
     /**
