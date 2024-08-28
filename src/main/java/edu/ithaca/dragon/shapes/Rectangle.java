@@ -19,7 +19,8 @@ public class Rectangle {
     }
 
     public double longestLineWithin(){
-        throw new RuntimeException("Not implemented yet");
+        // Diagonal through pythagorean theorem
+        return Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2));
     }
     
 }
