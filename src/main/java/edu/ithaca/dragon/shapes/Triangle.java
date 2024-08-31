@@ -8,4 +8,8 @@ public class Triangle {
         base = b;
         height = h;
     }
+
+    public double calcArea(){
+        throw new Error("Not implemented");
+    }
 }
