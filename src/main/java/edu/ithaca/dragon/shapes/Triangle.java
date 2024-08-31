@@ -5,6 +5,7 @@ public class Triangle {
     private double height;
 
     public Triangle(double b, double h){
+        // Makes isosceles triangle 
         base = b;
         height = h;
     }
@@ -14,6 +15,11 @@ public class Triangle {
     }
 
     public void doubleSize(){
+        throw new Error("Not implemented");
+    }
+
+    public double longestLineWithin(){
+        // Returns longest side(s)
         throw new Error("Not implemented");
     }
 }

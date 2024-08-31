@@ -23,4 +23,13 @@ public class TriangleTest {
         test.doubleSize();
         assertEquals(1, test.calcArea());
     }
+
+    @Test
+    public void longestLineWithinTest(){
+        Triangle test = new Triangle(2, 2);
+        assertEquals(2.2360679775, test.longestLineWithin(), 0.00001);
+
+        test = new Triangle(4, 2);
+        assertEquals(2.8284271247, test.longestLineWithin(), 0.00001);
+    }
 }
