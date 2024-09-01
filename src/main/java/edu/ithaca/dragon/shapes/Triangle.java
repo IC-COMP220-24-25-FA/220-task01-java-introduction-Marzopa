@@ -11,7 +11,7 @@ public class Triangle {
     }
 
     public double calcArea(){
-        throw new Error("Not implemented");
+        return base * height / 2;
     }
 
     public void doubleSize(){
