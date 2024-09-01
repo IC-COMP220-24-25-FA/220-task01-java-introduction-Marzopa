@@ -15,7 +15,8 @@ public class Triangle {
     }
 
     public void doubleSize(){
-        throw new Error("Not implemented");
+        base = base*2;
+        height = height*2;
     }
 
     public double longestLineWithin(){
