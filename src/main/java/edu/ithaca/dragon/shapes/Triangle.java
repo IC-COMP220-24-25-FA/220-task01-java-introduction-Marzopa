@@ -21,6 +21,6 @@ public class Triangle {
 
     public double longestLineWithin(){
         // Returns longest side(s)
-        throw new Error("Not implemented");
+        return Math.sqrt(Math.pow((base/2),2) + Math.pow(height,2));
     }
 }
