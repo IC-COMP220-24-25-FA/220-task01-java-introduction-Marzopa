@@ -1,7 +1,9 @@
 package edu.ithaca.dragon.practice;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 public class FunctionPracticeTest {
@@ -28,5 +30,20 @@ public class FunctionPracticeTest {
         assertEquals(160.28, FunctionPractice.calcSalePrice(157.14, 15, 20), 0.01);
         assertEquals(0, FunctionPractice.calcSalePrice(1, 100, 15));
     }
-    }
 
+    @Test
+    public void isGoodDogTest(){
+        // If brought the paper today, always good dog
+        assertTrue(FunctionPractice.isGoodDog(2, 0, true));
+
+        // If dog is over 30 (dead), dog was good today
+        assertTrue(FunctionPractice.isGoodDog(32, 0, false));
+
+        // If days since last shoe chewed is at least the same as twice the age, unless the dog is 5 or over, good dog
+        assertTrue(FunctionPractice.isGoodDog(4, 8, false));
+        assertFalse(FunctionPractice.isGoodDog(4, 7, false));
+        assertTrue(FunctionPractice.isGoodDog(2, 4, false));
+        assertFalse(FunctionPractice.isGoodDog(5, 1, false));
+        assertTrue(FunctionPractice.isGoodDog(5, 0, false));
+    }
+    }
