@@ -1,6 +1,7 @@
 package edu.ithaca.dragon.practice;
 
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -87,5 +88,20 @@ public class FunctionPracticeTest {
         testList.add(2);
         assertEquals(5, FunctionPractice.findLastLargest(testList));
 
+    }
+
+    @Test
+    public void findFirstMostOccurencesOfLetter(){
+        ArrayList<String> testList = new ArrayList<>();
+        testList.add("abc");
+        assertEquals("abc", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'a'));
+        testList.add("pirp");
+        assertEquals("abc", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'a'));
+        assertEquals("pirp", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'p'));
+        testList.add("ap");
+        assertEquals("pirp", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'p'));
+        testList.add("pirpipp");
+        assertEquals("pirpipp", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'p'));
+        assertThrows(NoSuchElementException.class, () -> FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'z'));
     }
     }
