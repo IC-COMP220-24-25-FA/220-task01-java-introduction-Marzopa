@@ -1,6 +1,7 @@
 package edu.ithaca.dragon.practice;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class FunctionPractice {
 
@@ -83,10 +84,31 @@ public class FunctionPractice {
 
     /**
      * @return the string that has contains the most occurences of the given letter
-     * @throws 
+     * @throws NoSuchElementException if letter isnt present
      */
     public static String findFirstMostOccurencesOfLetter(List<String> words, char letter){
-        throw new RuntimeException("Not Implemented");
+        int count = 0;
+        int c;
+        String string = "";
+
+        for (String str : words){
+            c = 0;
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) == letter){
+                    c++;
+                }
+            }
+            if (c>count){
+                count = c;
+                string = str;
+            }
+
+        }
+        if (count == 0){
+            throw new NoSuchElementException("No elements with character");
+        }
+        return string;
+
     }
 
 
