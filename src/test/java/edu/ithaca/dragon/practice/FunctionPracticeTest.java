@@ -1,10 +1,15 @@
 package edu.ithaca.dragon.practice;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
+
+import edu.ithaca.dragon.shapes.Rectangle;
+import scala.collection.immutable.List;
 
 public class FunctionPracticeTest {
 
@@ -45,5 +50,22 @@ public class FunctionPracticeTest {
         assertTrue(FunctionPractice.isGoodDog(2, 4, false));
         assertFalse(FunctionPractice.isGoodDog(5, 1, false));
         assertFalse(FunctionPractice.isGoodDog(5, 0, false));
+    }
+
+    @Test
+    public void findFirstLargestTest(){
+        ArrayList<Integer> testList = new ArrayList<>();
+        testList.add(5);
+        testList.add(4);
+        testList.add(-1);
+        assertEquals(0, FunctionPractice.findFirstLargest(testList));
+        testList.add(6);
+        assertEquals(3, FunctionPractice.findFirstLargest(testList));
+        testList.add(6);
+        testList.add(6);
+        assertEquals(3, FunctionPractice.findFirstLargest(testList));
+        testList.add(2);
+        assertEquals(3, FunctionPractice.findFirstLargest(testList));
+
     }
     }
