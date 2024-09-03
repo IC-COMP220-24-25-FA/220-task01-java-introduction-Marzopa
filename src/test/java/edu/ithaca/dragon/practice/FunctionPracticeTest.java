@@ -9,9 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
-import edu.ithaca.dragon.shapes.Rectangle;
-import scala.collection.immutable.List;
-
 public class FunctionPracticeTest {
 
     @Test
