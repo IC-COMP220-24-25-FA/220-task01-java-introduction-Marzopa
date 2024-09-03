@@ -55,6 +55,7 @@ public class FunctionPracticeTest {
     @Test
     public void findFirstLargestTest(){
         ArrayList<Integer> testList = new ArrayList<>();
+        assertEquals(-1, FunctionPractice.findFirstLargest(testList));
         testList.add(5);
         testList.add(4);
         testList.add(-1);
