@@ -2,7 +2,6 @@ package edu.ithaca.dragon.practice;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 
 public class FunctionPracticeTest {
@@ -24,7 +23,10 @@ public class FunctionPracticeTest {
 
     @Test
     public void calcSalePriceTest(){
-        fail("Not implemented yet");
+        assertEquals(115, FunctionPractice.calcSalePrice(100, 0, 15));
+        assertEquals(120, FunctionPractice.calcSalePrice(200, 50, 20));
+        assertEquals(160.28, FunctionPractice.calcSalePrice(157.14, 15, 20), 0.01);
+        assertEquals(0, FunctionPractice.calcSalePrice(1, 100, 15));
     }
-    
-}
+    }
+
