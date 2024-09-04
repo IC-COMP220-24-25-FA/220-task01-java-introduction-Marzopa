@@ -1,6 +1,7 @@
 package edu.ithaca.dragon.practice;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -52,7 +53,7 @@ public class FunctionPracticeTest {
 
     @Test
     public void findFirstLargestTest(){
-        ArrayList<Integer> testList = new ArrayList<>();
+        List<Integer> testList = new ArrayList<>();
         assertEquals(-1, FunctionPractice.findFirstLargest(testList));
         testList.add(5);
         testList.add(4);
