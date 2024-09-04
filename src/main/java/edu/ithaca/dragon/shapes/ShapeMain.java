@@ -40,6 +40,15 @@ public class ShapeMain {
             }
         }
 
+        System.out.println("\n\n\n");
+        
+        for (int i = 0; i < 10; i++) {
+            Shape shape = shapes.get(i);
+            shape.doubleSize();
+            System.out.println(shape);
+        }
+        
+        System.out.println("\n\n\n");
         // OLD CODE
         // Generate rectangles
         ArrayList<Rectangle> rects =new ArrayList<>();
