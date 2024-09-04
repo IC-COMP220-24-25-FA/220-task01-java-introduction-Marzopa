@@ -24,6 +24,7 @@ public class ShapeMain {
 
         List<Shape> shapes = new ArrayList<>();
 
+        // Generates Shape objects
         for (int i = 0; i < 10; i++) {
             int selection = geRandom.nextInt(1,4);
             if (selection == 1){
@@ -42,6 +43,7 @@ public class ShapeMain {
 
         System.out.println("\n\n\n");
         
+        // Doubles and prints them
         for (int i = 0; i < 10; i++) {
             Shape shape = shapes.get(i);
             shape.doubleSize();
